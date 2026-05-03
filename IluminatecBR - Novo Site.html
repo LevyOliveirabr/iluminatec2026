@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IluminatecBR — Representante Oficial Signify Philips · Iluminação Profissional</title>
+<meta name="description" content="Representante Oficial Signify Philips no Brasil. Soluções de iluminação viária, pública, industrial, esportiva e arquitetural. Telegestão Interact City, BESS e energia solar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #fff; color: #0D1F2D;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.85); } }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Hover states */
+  .nav-link:hover { color: #00CC66 !important; }
+  .nav-cta:hover { background: #009944 !important; transform: translateY(-1px); }
+  .cta-primary:hover { background: #00e673 !important; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,204,102,0.35); }
+  .cta-ghost:hover { border-color: #00CC66 !important; color: #00CC66 !important; }
+  .seg-card:hover { background: rgba(0,204,102,0.06) !important; border-color: rgba(0,204,102,0.3) !important; transform: translateY(-3px); }
+  .prod-card:hover { border-color: #00CC66 !important; transform: translateY(-3px); box-shadow: 0 16px 40px rgba(13,31,45,0.1); }
+  .why-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.06); border-color: #d8e0d8 !important; }
+  .case-card:hover { background: rgba(0,204,102,0.05) !important; border-color: rgba(0,204,102,0.2) !important; }
+  .pillar-card:hover { background: #fff !important; box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
+  .footer-link:hover { color: #00CC66 !important; }
+  .social-link:hover { border-color: #00CC66 !important; background: rgba(0,204,102,0.08); color: #00CC66 !important; }
+  .wa-float:hover { transform: scale(1.08); }
+
+  /* Form focus */
+  input:focus, select:focus, textarea:focus { border-color: #00CC66 !important; }
+  ::placeholder { color: rgba(255,255,255,0.3); }
+
+  /* Range slider styling */
+  input[type=range] { height: 4px; -webkit-appearance: none; appearance: none; background: rgba(255,255,255,0.15); border-radius: 2px; }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #00CC66; cursor: pointer; border: 3px solid #fff;
+    box-shadow: 0 0 0 1px rgba(0,204,102,0.5);
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #00CC66; cursor: pointer; border: 3px solid #fff;
+  }
+
+  /* Section reveal */
+  section { animation: fadeInUp 0.6s ease both; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .nav-desktop { display: none !important; }
+    .about-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+    .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .roi-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+    .hero-cobrand { display: none !important; }
+  }
+  @media (max-width: 600px) {
+    .footer-grid { grid-template-columns: 1fr !important; }
+  }
+
+  /* Selection */
+  ::selection { background: #00CC66; color: #0D1F2D; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- React + Babel (pinned versions, mandatory) -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- Tweaks panel shell -->
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+
+<!-- Components -->
+<script type="text/babel" src="assets/icons.jsx"></script>
+<script type="text/babel" src="assets/logos.jsx"></script>
+<script type="text/babel" src="assets/hero-scene.jsx"></script>
+<script type="text/babel" src="sections/segments.jsx"></script>
+<script type="text/babel" src="sections/products-roi.jsx"></script>
+<script type="text/babel" src="sections/why-cases-contact.jsx"></script>
+
+<!-- App entry -->
+<script type="text/babel" src="app.jsx"></script>
+</body>
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IluminatecBR — Representante Oficial Signify Philips</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #00CC66;
+    --green-dark: #009944;
+    --navy: #0D1F2D;
+    --blue-mid: #1A3A6B;
+    --black: #111111;
+    --offwhite: #F4F7F4;
+    --gray: #595959;
+    --lgray: #888;
+    --white: #fff;
+    --grad: linear-gradient(135deg, #1A3A6B 0%, #0D4A2E 100%);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--navy); }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(13,31,45,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,204,102,0.15);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between; height: 64px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-symbol { width: 36px; height: 36px; border: 2px solid var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Nunito Sans', sans-serif; font-weight: 700; color: var(--green); font-size: 18px; flex-shrink: 0; }
+  .nav-wordmark { font-family: 'Nunito Sans', sans-serif; font-size: 18px; color: var(--white); }
+  .nav-wordmark span { color: var(--green); font-weight: 700; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color .2s; }
+  .nav-links a:hover { color: var(--green); }
+  .nav-cta { background: var(--green); color: var(--navy); padding: 9px 22px; border-radius: 4px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--green-dark); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex; align-items: center;
+    padding: 100px 5% 60px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    border: 1px solid rgba(0,204,102,0.06); border-radius: 50%;
+  }
+  .hero::after {
+    content: ''; position: absolute; top: 50px; right: -50px;
+    width: 400px; height: 400px;
+    border: 1px solid rgba(0,204,102,0.1); border-radius: 50%;
+  }
+  .hero-content { max-width: 620px; position: relative; z-index: 2; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(0,204,102,0.3); border-radius: 4px;
+    padding: 6px 14px; font-size: 11px; color: var(--green);
+    letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 32px;
+  }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  .hero h1 { font-family: 'Nunito Sans', sans-serif; font-size: clamp(36px,5vw,56px); font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 24px; }
+  .hero h1 em { color: var(--green); font-style: normal; }
+  .hero p { font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 40px; }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary { background: var(--green); color: var(--navy); padding: 14px 32px; border-radius: 4px; font-weight: 700; font-size: 15px; text-decoration: none; transition: all .2s; }
+  .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+  .btn-ghost { border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.8); padding: 14px 32px; border-radius: 4px; font-size: 15px; text-decoration: none; transition: all .2s; }
+  .btn-ghost:hover { border-color: var(--green); color: var(--green); }
+  .hero-stats { display: flex; gap: 40px; margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .stat-num { font-family: 'Nunito Sans', sans-serif; font-size: 32px; font-weight: 700; color: var(--green); }
+  .stat-label { font-size: 12px; color: rgba(255,255,255,0.45); letter-spacing: 0.5px; margin-top: 4px; }
+
+  /* ── SECTIONS ── */
+  section { padding: 96px 5%; }
+  .section-tag { font-size: 11px; color: var(--green); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; font-weight: 600; }
+  .section-title { font-family: 'Nunito Sans', sans-serif; font-size: clamp(28px,4vw,42px); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 20px; }
+  .section-title em { color: var(--green); font-style: normal; }
+  .section-sub { font-size: 17px; color: var(--lgray); line-height: 1.7; max-width: 600px; }
+
+  /* ── ABOUT / PILARES ── */
+  .about { background: var(--offwhite); }
+  .pillars { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 24px; margin-top: 56px; }
+  .pillar {
+    background: var(--white); border-radius: 8px; padding: 32px 28px;
+    border-left: 3px solid var(--green); transition: transform .2s, box-shadow .2s;
+  }
+  .pillar:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+  .pillar-icon { font-size: 28px; margin-bottom: 16px; }
+  .pillar h3 { font-family: 'Nunito Sans', sans-serif; font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+  .pillar p { font-size: 14px; color: var(--lgray); line-height: 1.65; }
+
+  /* ── PRODUCTS / SEGMENTOS ── */
+  .products { background: var(--navy); }
+  .products .section-title { color: var(--white); }
+  .products .section-sub { color: rgba(255,255,255,0.5); }
+  .segments { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 20px; margin-top: 56px; }
+  .segment {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px; padding: 28px; transition: all .2s; cursor: default;
+  }
+  .segment:hover { background: rgba(0,204,102,0.07); border-color: rgba(0,204,102,0.3); transform: translateY(-3px); }
+  .seg-icon { width: 48px; height: 48px; border-radius: 8px; background: rgba(0,204,102,0.12); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
+  .segment h3 { font-family: 'Nunito Sans', sans-serif; font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+  .segment p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.65; margin-bottom: 16px; }
+  .seg-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .seg-tag { font-size: 11px; color: var(--green); border: 1px solid rgba(0,204,102,0.25); border-radius: 3px; padding: 3px 9px; }
+
+  /* ── PRODUTO CARDS ── */
+  .product-line { padding: 96px 5%; background: var(--white); }
+  .product-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 24px; margin-top: 48px; }
+  .product-card {
+    border: 1px solid #e8ede8; border-radius: 8px; overflow: hidden;
+    transition: all .2s;
+  }
+  .product-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); border-color: var(--green); }
+  .product-img { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+  .product-body { padding: 20px; }
+  .product-brand { font-size: 10px; color: var(--green); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; margin-bottom: 6px; }
+  .product-name { font-family: 'Nunito Sans', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .product-desc { font-size: 13px; color: var(--lgray); line-height: 1.6; margin-bottom: 14px; }
+  .product-specs { display: flex; flex-wrap: wrap; gap: 6px; }
+  .product-spec { font-size: 11px; background: var(--offwhite); color: var(--navy); border-radius: 3px; padding: 3px 8px; font-family: 'DM Mono', monospace; }
+
+  /* ── WHY US ── */
+  .why { background: var(--offwhite); }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 28px; margin-top: 56px; }
+  .why-card { background: var(--white); border-radius: 8px; padding: 32px; }
+  .why-num { font-family: 'Nunito Sans', sans-serif; font-size: 48px; font-weight: 700; color: var(--offwhite); line-height: 1; margin-bottom: 16px; }
+  .why-card h3 { font-family: 'Nunito Sans', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+  .why-card p { font-size: 14px; color: var(--lgray); line-height: 1.65; }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--grad); }
+  .contact .section-title { color: var(--white); }
+  .contact .section-sub { color: rgba(255,255,255,0.6); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 56px; }
+  .contact-form { display: flex; flex-direction: column; gap: 14px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 0.5px; }
+  .form-group input, .form-group select, .form-group textarea {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px; padding: 12px 16px; color: var(--white); font-family: 'DM Sans', sans-serif;
+    font-size: 14px; outline: none; transition: border .2s;
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green); }
+  .form-group select option { background: var(--navy); color: var(--white); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-btn { background: var(--green); color: var(--navy); border: none; padding: 14px; border-radius: 4px; font-weight: 700; font-size: 15px; cursor: pointer; transition: all .2s; margin-top: 8px; }
+  .form-btn:hover { background: #FFFFFF; }
+  .contact-info { display: flex; flex-direction: column; gap: 24px; padding-top: 8px; }
+  .info-item { display: flex; align-items: flex-start; gap: 16px; }
+  .info-icon { width: 44px; height: 44px; border: 1px solid rgba(0,204,102,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .info-item h4 { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; }
+  .info-item p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--black); padding: 48px 5% 32px; }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.7; max-width: 280px; margin-top: 12px; }
+  .footer-links h4 { font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { font-size: 14px; color: rgba(255,255,255,0.55); text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: var(--green); }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.25); }
+  .footer-social { display: flex; gap: 12px; }
+  .social-link { width: 34px; height: 34px; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none; transition: all .2s; }
+  .social-link:hover { border-color: var(--green); background: rgba(0,204,102,0.08); }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:768px){
+    .nav-links { display: none; }
+    .hero-stats { flex-wrap: wrap; gap: 24px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-top { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-symbol">i</div>
+    <div class="nav-wordmark">lumina<span>tec</span><span style="font-weight:300;opacity:.4;font-size:14px;">BR</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#segmentos">Segmentos</a></li>
+    <li><a href="#produtos">Produtos</a></li>
+    <li><a href="#por-que">Por que nós</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a href="#contato" class="nav-cta">Solicitar Cotação</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Representante Oficial Signify Philips</div>
+    <h1>Energia e<br><em>Iluminação</em><br>Profissional</h1>
+    <p>Soluções Philips Signify de classe mundial para iluminação pública, industrial, esportiva e arquitetural. Energia solar e BESS. Atendimento nacional com suporte técnico especializado.</p>
+    <div class="hero-btns">
+      <a href="#contato" class="btn-primary">Solicitar Cotação</a>
+      <a href="#produtos" class="btn-ghost">Ver Portfólio</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">70%</div>
+        <div class="stat-label">Redução no consumo com retrofit LED</div>
+      </div>
+      <div>
+        <div class="stat-num">6+</div>
+        <div class="stat-label">Segmentos de atuação</div>
+      </div>
+      <div>
+        <div class="stat-num">BR</div>
+        <div class="stat-label">Atendimento nacional</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="about" id="sobre">
+  <div class="section-tag">Quem somos</div>
+  <h2 class="section-title">Especialistas em <em>energia</em> e iluminação para o mercado B2B</h2>
+  <p class="section-sub">A IluminatecBR é uma empresa de representação comercial especializada, com portfólio que cobre do ponto de luz ao sistema de armazenamento de energia.</p>
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-icon">💡</div>
+      <h3>Representante Oficial Signify Philips</h3>
+      <p>Acesso ao portfólio completo Philips — luminárias de interiores, exteriores, sistemas de controle Dynalite e Interact, iluminação arquitetural Color Kinetics.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🏙️</div>
+      <h3>Iluminação Pública Inteligente</h3>
+      <p>Soluções para cidades: retrofit LED, telegestão via Interact, postes inteligentes e iluminação solar. Conformidade com legislação brasileira 2026.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">⚡</div>
+      <h3>BESS e Energia Solar</h3>
+      <p>Parceiros da Formosa Smart Energy (FSE, Taiwan) para sistemas de armazenamento de energia e do Grupo Ultra Engenharia para projetos elétricos e renováveis.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🔧</div>
+      <h3>Suporte Técnico Especializado</h3>
+      <p>Especificação técnica, projetos luminotécnicos via DIALux/Relux, laudos fotométricos e suporte pós-venda com respaldo direto do fabricante.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEGMENTOS -->
+<section class="products" id="segmentos">
+  <div class="section-tag">Áreas de Atuação</div>
+  <h2 class="section-title">Soluções para cada <em>segmento</em></h2>
+  <p class="section-sub">Do campo de futebol de bairro ao estádio profissional. Da quadra do condomínio à fábrica de médio porte. Temos a solução certa.</p>
+  <div class="segments">
+    <div class="segment">
+      <div class="seg-icon">🌆</div>
+      <h3>Cidades e Iluminação Pública</h3>
+      <p>Retrofit LED para prefeituras, telegestão Interact, iluminação solar e postes inteligentes para cidades brasileiras.</p>
+      <div class="seg-tags">
+        <span class="seg-tag">Retrofit LED</span>
+        <span class="seg-tag">Telegestão</span>
+        <span class="seg-tag">Solar</span>
+        <span class="seg-tag">Smart City</span>
+      </div>
+    </div>
+    <div class="segment">
+      <div class="seg-icon">🏭</div>
+      <h3>Industrial e Galpões</h3>
+      <p>High Bay LED para galpões, luminárias IP65/IP66 para ambientes agressivos, controle Dynalite para centros logísticos.</p>
+      <div class="seg-tags">
+        <span class="seg-tag">High Bay</span>
+        <span class="seg-tag">IP65/IP66</span>
+        <span class="seg-tag">Galpões</span>
+        <span class="seg-tag">Fábricas</span>
+      </div>
+    </div>
+    <div class="segment">
+      <div class="seg-icon">🏢</div>
+      <h3>Corporativo e Escritórios</h3>
+      <p>Downlights, painéis e sistemas Dynalite para edifícios corporativos. Automação inteligente e eficiência energética.</p>
+      <div class="seg-tags">
+        <span class="seg-tag">Downlights</span>
+        <span class="seg-tag">Painéis</span>
+        <span class="seg-tag">Dynalite</span>
+        <span class="seg-tag">Interact</span>
+      </div>
+    </div>
+    <div class="segment">
+      <div class="seg-icon">⚽</div>
+      <h3>Esportes e Arenas</h3>
+      <p>Refletores Philips para campos, quadras e arenas. Homologado para transmissão em HD/4K. Do society ao estádio profissional.</p>
+      <div class="seg-tags">
+        <span class="seg-tag">Estádios</span>
+        <span class="seg-tag">Quadras</span>
+        <span class="seg-tag">HD/4K</span>
+        <span class="seg-tag">Beach Tennis</span>
+      </div>
+    </div>
+    <div class="segment">
+      <div class="seg-icon">🎨</div>
+      <h3>Arquitetural e Design</h3>
+      <p>Color Kinetics para fachadas. Accent lighting para museus, hotéis e shoppings. Fitas LED IRC 90+. Controle de cenas Dynalite.</p>
+      <div class="seg-tags">
+        <span class="seg-tag">Color Kinetics</span>
+        <span class="seg-tag">Fachadas</span>
+        <span class="seg-tag">IRC 90+</span>
+        <span class="seg-tag">Hotéis</span>
+      </div>
+    </div>
+    <div class="segment">
+      <div class="seg-icon">🚗</div>
+      <h3>Transporte e Infraestrutura</h3>
+      <p>Luminárias para rodovias, tuneis e aeroportos. Alta resistência e baixíssima manutenção para infraestrutura crítica.</p>
+      <div class="seg-tags">
+        <span class="seg-tag">Rodovias</span>
+        <span class="seg-tag">Túneis</span>
+        <span class="seg-tag">Aeroportos</span>
+        <span class="seg-tag">IP67</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="product-line" id="produtos">
+  <div class="section-tag">Portfólio Philips Signify</div>
+  <h2 class="section-title">Linha completa de <em>produtos</em></h2>
+  <p class="section-sub">Representante Oficial da linha mais completa de iluminação profissional do mundo. Catálogo técnico disponível sob consulta.</p>
+  <div class="product-grid">
+
+    <div class="product-card">
+      <div class="product-img" style="background:#E6FFF2">🔦</div>
+      <div class="product-body">
+        <div class="product-brand">Philips · Interiores</div>
+        <div class="product-name">Downlights LED</div>
+        <div class="product-desc">Downlights embutidos e de sobrepor para ambientes corporativos, hotéis e varejo. Alta eficiência e excelente IRC.</div>
+        <div class="product-specs">
+          <span class="product-spec">IRC ≥ 80</span>
+          <span class="product-spec">Ø60–230mm</span>
+          <span class="product-spec">8–24W</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:#EEF3FA">🔲</div>
+      <div class="product-body">
+        <div class="product-brand">Philips · Interiores</div>
+        <div class="product-name">Painéis LED</div>
+        <div class="product-desc">Painéis para embutir e sobrepor. Ideal para escritórios, salas de reunião e áreas comerciais com iluminação uniforme.</div>
+        <div class="product-specs">
+          <span class="product-spec">600×600mm</span>
+          <span class="product-spec">1200×300mm</span>
+          <span class="product-spec">36–40W</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:#E6FFF2">🏭</div>
+      <div class="product-body">
+        <div class="product-brand">Philips · Industrial</div>
+        <div class="product-name">High Bay LED</div>
+        <div class="product-desc">Luminárias para galpões e indústrias com pé-direito alto. Versões UFO e linear. Alta eficiência e longa vida útil.</div>
+        <div class="product-specs">
+          <span class="product-spec">80–240W</span>
+          <span class="product-spec">IP65</span>
+          <span class="product-spec">50.000h</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:#FFF8E6">🔆</div>
+      <div class="product-body">
+        <div class="product-brand">Philips · Exteriores</div>
+        <div class="product-name">Luminárias Viárias LED</div>
+        <div class="product-desc">Luminárias para rodovias, ruas e áreas urbanas. Compatíveis com sistemas de telegestão Interact para prefeituras.</div>
+        <div class="product-specs">
+          <span class="product-spec">IP66</span>
+          <span class="product-spec">IK08</span>
+          <span class="product-spec">Telegestão</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:#E6FFF2">⚽</div>
+      <div class="product-body">
+        <div class="product-brand">Philips · Esportes</div>
+        <div class="product-name">Projetores Esportivos</div>
+        <div class="product-desc">Projetores de alta potência para campos, quadras e arenas. Homologados para transmissão em HD e 4K. Liga instantânea.</div>
+        <div class="product-specs">
+          <span class="product-spec">IRC ≥ 65</span>
+          <span class="product-spec">100–1000W</span>
+          <span class="product-spec">IP66</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:#EEF3FA">🌈</div>
+      <div class="product-body">
+        <div class="product-brand">Color Kinetics · Arquitetural</div>
+        <div class="product-name">Iluminação Arquitetural</div>
+        <div class="product-desc">Color Kinetics para fachadas, monumentos e espaços premium. RGB full-color, controle de cenas, efeitos dinâmicos.</div>
+        <div class="product-specs">
+          <span class="product-spec">RGB + Branco</span>
+          <span class="product-spec">DMX/DALI</span>
+          <span class="product-spec">IP67</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:#E6FFF2">⚙️</div>
+      <div class="product-body">
+        <div class="product-brand">Dynalite · Controle</div>
+        <div class="product-name">Sistema Dynalite</div>
+        <div class="product-desc">Controle inteligente de iluminação para edifícios. Sensores de presença, cenários, integração com BMS e automação predial.</div>
+        <div class="product-specs">
+          <span class="product-spec">DALI</span>
+          <span class="product-spec">KNX</span>
+          <span class="product-spec">BACnet</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:#FFF8E6">📡</div>
+      <div class="product-body">
+        <div class="product-brand">Interact · IoT</div>
+        <div class="product-name">Plataforma Interact</div>
+        <div class="product-desc">Plataforma IoT de gestão de iluminação conectada. Monitoramento remoto, dados de desempenho e redução de custos operacionais.</div>
+        <div class="product-specs">
+          <span class="product-spec">Cloud</span>
+          <span class="product-spec">API aberta</span>
+          <span class="product-spec">Dashboard</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:#EEF3FA">☀️</div>
+      <div class="product-body">
+        <div class="product-brand">Philips · Solar</div>
+        <div class="product-name">Iluminação Solar Pública</div>
+        <div class="product-desc">Luminárias all-in-one com painel solar e bateria integrada. Ideal para zonas rurais e locais sem rede elétrica.</div>
+        <div class="product-specs">
+          <span class="product-spec">All-in-one</span>
+          <span class="product-spec">LiFePO4</span>
+          <span class="product-spec">IP65</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:#E6FFF2">🔋</div>
+      <div class="product-body">
+        <div class="product-brand">FSE · Energia</div>
+        <div class="product-name">BESS — Armazenamento</div>
+        <div class="product-desc">Battery Energy Storage Systems da Formosa Smart Energy (Taiwan). Para indústrias, comercial e geração solar. On-grid e off-grid.</div>
+        <div class="product-specs">
+          <span class="product-spec">On/Off-grid</span>
+          <span class="product-spec">LFP</span>
+          <span class="product-spec">Smart BMS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:#E6FFF2">💡</div>
+      <div class="product-body">
+        <div class="product-brand">Philips · Lâmpadas</div>
+        <div class="product-name">Lâmpadas e Fitas LED</div>
+        <div class="product-desc">Linha completa de lâmpadas tubulares, direcionais, bulbo e fitas LED. Alta IRC e longa durabilidade para retrofit.</div>
+        <div class="product-specs">
+          <span class="product-spec">Tubular T8</span>
+          <span class="product-spec">Fita 5m</span>
+          <span class="product-spec">IRC ≥ 90</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background:#FFF8E6">🏗️</div>
+      <div class="product-body">
+        <div class="product-brand">Ultra Engenharia</div>
+        <div class="product-name">Projetos Elétricos</div>
+        <div class="product-desc">Obras e projetos de engenharia elétrica, fotovoltaica e infraestrutura civil. Parceria com Grupo Ultra Engenharia.</div>
+        <div class="product-specs">
+          <span class="product-spec">Solar FV</span>
+          <span class="product-spec">Elétrica</span>
+          <span class="product-spec">Civil</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- POR QUE NÓS -->
+<section class="why" id="por-que">
+  <div class="section-tag">Diferenciais</div>
+  <h2 class="section-title">Por que escolher a <em>IluminatecBR</em></h2>
+  <p class="section-sub">Não somos apenas mais um fornecedor de produto. Somos um parceiro técnico comprometido com o sucesso do seu projeto.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <h3>Representante Oficial Signify Philips</h3>
+      <p>Acesso direto ao portfólio completo com suporte técnico e garantia do fabricante líder mundial em iluminação.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <h3>Especificação Técnica Completa</h3>
+      <p>Laudos fotométricos, projetos luminotécnicos via DIALux/Relux, memoriais descritivos para construtoras e arquitetos.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <h3>Cobertura Nacional</h3>
+      <p>Atendimento em todo o Brasil. Suporte remoto com resposta em até 24 horas. Visitas técnicas mediante agendamento.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">04</div>
+      <h3>Portfólio Multisegmento</h3>
+      <p>Da lâmpada do corredor ao sistema de armazenamento de energia — um parceiro para toda a jornada energética da sua empresa.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">05</div>
+      <h3>ROI Comprovado</h3>
+      <p>Até 70% de redução no consumo energético com retrofit LED. Retorno sobre investimento calculado antes da compra.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">06</div>
+      <h3>Tecnologia de Ponta</h3>
+      <p>Interact IoT, Dynalite, Color Kinetics, BESS LFP — as mais avançadas tecnologias de energia e iluminação disponíveis no Brasil.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact" id="contato">
+  <div class="section-tag">Fale Conosco</div>
+  <h2 class="section-title">Solicite sua <em>cotação</em></h2>
+  <p class="section-sub">Preencha o formulário e nossa equipe técnica entra em contato em até 24 horas com uma proposta personalizada.</p>
+  <div class="contact-grid">
+    <form class="contact-form" onsubmit="return false">
+      <div class="form-group">
+        <label>NOME COMPLETO</label>
+        <input type="text" placeholder="Seu nome completo">
+      </div>
+      <div class="form-group">
+        <label>EMPRESA</label>
+        <input type="text" placeholder="Nome da empresa">
+      </div>
+      <div class="form-group">
+        <label>EMAIL</label>
+        <input type="email" placeholder="email@empresa.com.br">
+      </div>
+      <div class="form-group">
+        <label>TELEFONE / WHATSAPP</label>
+        <input type="text" placeholder="+55 (XX) XXXXX-XXXX">
+      </div>
+      <div class="form-group">
+        <label>SEGMENTO DE INTERESSE</label>
+        <select>
+          <option value="">Selecione um segmento</option>
+          <option>Iluminação Pública / Prefeitura</option>
+          <option>Industrial / Galpão / Fábrica</option>
+          <option>Corporativo / Escritório</option>
+          <option>Esportivo / Estádio / Quadra</option>
+          <option>Arquitetural / Design</option>
+          <option>Transporte / Infraestrutura</option>
+          <option>BESS / Energia Solar</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>MENSAGEM</label>
+        <textarea placeholder="Descreva brevemente seu projeto ou necessidade..."></textarea>
+      </div>
+      <button type="submit" class="form-btn">Enviar Solicitação →</button>
+    </form>
+    <div class="contact-info">
+      <div class="info-item">
+        <div class="info-icon">🌐</div>
+        <div>
+          <h4>Site</h4>
+          <p>iluminatec.com.br</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📸</div>
+        <div>
+          <h4>Instagram</h4>
+          <p>@iluminatecbr</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">💼</div>
+        <div>
+          <h4>LinkedIn</h4>
+          <p>linkedin.com/company/iluminatecbr</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📺</div>
+        <div>
+          <h4>YouTube</h4>
+          <p>@iluminatecbr</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📱</div>
+        <div>
+          <h4>WhatsApp Comercial</h4>
+          <p>+55 (XX) XXXXX-XXXX<br><span style="font-size:12px;opacity:.6">Seg–Sex · 8h às 18h</span></p>
+        </div>
+      </div>
+      <div style="margin-top:8px;padding:20px;background:rgba(0,204,102,0.1);border:1px solid rgba(0,204,102,0.2);border-radius:8px;">
+        <p style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.7;margin:0">
+          <strong style="color:#00CC66">Representante Oficial Signify Philips</strong><br>
+          Catálogo técnico completo disponível.<br>
+          Projetos luminotécnicos sob consulta.<br>
+          Resposta em até 24h úteis.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+        <div style="width:32px;height:32px;border:2px solid #00CC66;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Nunito Sans',sans-serif;font-weight:700;color:#00CC66;font-size:16px">i</div>
+        <span style="font-family:'Nunito Sans',sans-serif;font-size:16px;color:rgba(255,255,255,0.9)">lumina<strong style="color:#00CC66">tec</strong><span style="opacity:.3;font-size:12px">BR</span></span>
+      </div>
+      <p>Representante Oficial Signify Philips. Energia · Iluminação Profissional. Atendimento nacional.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Segmentos</h4>
+      <ul>
+        <li><a href="#segmentos">Iluminação Pública</a></li>
+        <li><a href="#segmentos">Industrial</a></li>
+        <li><a href="#segmentos">Corporativo</a></li>
+        <li><a href="#segmentos">Esportivo</a></li>
+        <li><a href="#segmentos">Arquitetural</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Produtos</h4>
+      <ul>
+        <li><a href="#produtos">Downlights Philips</a></li>
+        <li><a href="#produtos">High Bay LED</a></li>
+        <li><a href="#produtos">Color Kinetics</a></li>
+        <li><a href="#produtos">Dynalite</a></li>
+        <li><a href="#produtos">BESS / Solar</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#por-que">Diferenciais</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="https://www.signify.com/pt-br">Signify Brasil</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 IluminatecBR — Representante Oficial Signify Philips. Todos os direitos reservados.</p>
+    <div class="footer-social">
+      <a class="social-link" href="#" title="Instagram">📸</a>
+      <a class="social-link" href="#" title="LinkedIn">💼</a>
+      <a class="social-link" href="#" title="YouTube">📺</a>
+      <a class="social-link" href="#" title="WhatsApp">📱</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
