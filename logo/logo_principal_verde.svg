@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="160" viewBox="0 0 640 160">
+
+<g transform="translate(28,28)">
+  <circle cx="52" cy="52" r="48" fill="none" stroke="#00CC66" stroke-width="6"/>
+  <text x="52" y="72" font-family="Nunito Sans Bold" font-size="56" font-weight="700" fill="#00CC66" text-anchor="middle">i</text>
+</g>
+<text x="146" y="98" font-family="Nunito Sans Regular" font-size="64" fill="#FFFFFF" letter-spacing="-1">luminatec</text>
+<text x="448" y="98" font-family="Nunito Sans Bold" font-size="52" font-weight="700" fill="#00CC66" letter-spacing="-1">br</text>
+<text x="148" y="132" font-family="Nunito Sans Regular" font-size="18.5" fill="rgba(0,204,102,0.75)" letter-spacing="3.2">energia · iluminação profissional</text>
+</svg>
